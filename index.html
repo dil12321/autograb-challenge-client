@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="app.js"></script>
+
+<h1>Drill Down Form</h1>
+
+<form id="car_form" action="http://localhost:4000/upload" method="POST" enctype="multipart/form-data">
+  <div>
+    <select id ="make" name="make" onchange="onMakeChange(this.value);">
+    </select>
+  </div>
+  <div>
+    <select id ="model" name="model" onchange="onModelChange(this.value);">
+    </select>
+  </div>
+  <div>
+    <select id ="badge" name="badge" onchange="onBadgeChange();">
+      <option selected disabled>badge</option>
+    </select>
+  </div>
+  <br><br>
+  <div id="uploader">
+    <p>Upload Logbook:</p>
+    <div>
+      <input type="file" id="file_upload" name="logbook" required>
+    </div>
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </div>
+</form>
+
+<h2>Select a Vehicle</h2>
+<div>
+  <button type="button" onclick="setInfo('Tesla', 'Model 3', 'Performance')">Tesla Model 3 Performance</button>
+</div>
+<div>
+  <button type="button" onclick="setInfo('BMW', '130d', 'xDrive 26d')">BMW 130d xDrive 26d</button>
+</div>
+</body>
+</html>
